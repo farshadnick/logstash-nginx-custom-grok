@@ -1,0 +1,8 @@
+filebeat.inputs:
+- type: log
+  paths:
+   - /var/nginx/logs/access/*.log
+  exclude_files: ['\.gz$']
+
+output.logstash:
+  hosts: ["192.168.10.53:5400"]
